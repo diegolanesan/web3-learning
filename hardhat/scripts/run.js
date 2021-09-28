@@ -17,7 +17,6 @@ const main = async() => {
     let contractBalance = await hre.ethers.provider.getBalance(waveContract.address)
     console.log("Contract balance: ", hre.ethers.utils.formatEther(contractBalance))
     // Llamamos manualmente a las funciones del smart contract
-    // Tal como haríamos con una API normal, buena analogía
     let waveCount
     waveCount = await waveContract.getTotalWaves()
     console.log(waveCount.toNumber())
